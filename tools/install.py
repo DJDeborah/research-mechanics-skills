@@ -2,7 +2,7 @@
 import argparse,shutil
 from pathlib import Path
 
-NAMES=('research-significance','research-gap','research-writing','fem-explicit-bifurcation')
+NAMES=('research-significance','research-gap','research-writing','fem-explicit-bifurcation','research-word')
 def install(source,dest,names):
     dest=dest.resolve();source=source.resolve();targets=[dest/n for n in names]
     if len(names)!=len(set(names)):raise ValueError('duplicate skill selection')

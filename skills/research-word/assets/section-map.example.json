@@ -1,0 +1,75 @@
+{
+  "document": {
+    "source_version": "path/to/reference.docx",
+    "output": "path/to/revised.docx",
+    "language": "English",
+    "organization": "unified analysis",
+    "use_tables": false
+  },
+  "sections": [
+    {
+      "id": "S1",
+      "title": "Reference geometry and coupled model",
+      "question": "Which physical configuration and energy are being analysed?",
+      "sample": "Name the specimen, reference coordinates, material law and boundary conditions",
+      "variables": ["state coordinates q", "prescribed control U"],
+      "inputs": ["data/reference_geometry.json", "code/model.py"],
+      "processing": "Register nodal degrees of freedom and assemble the complete energy",
+      "observation": "Record the model-to-specimen correspondence and its numerical discrepancy",
+      "figure_ids": ["F1"],
+      "statement": "The comparison uses a stated effective configuration and the full coupled energy"
+    },
+    {
+      "id": "S2",
+      "title": "Contact constraints and initial unstable motion",
+      "question": "Which virtual nodal increments are permitted, and do they lower energy?",
+      "sample": "A specified reached equilibrium and contact state",
+      "variables": ["contact gap", "contact reaction", "allowed virtual increment"],
+      "inputs": ["data/equilibrium_states.npz", "data/contact_jacobians.npz"],
+      "processing": "Apply the current constraints to the Lagrangian Hessian and recover the physical mode",
+      "observation": "Report the reaction, normalized curvature and opening and mouth components",
+      "figure_ids": ["F2"],
+      "statement": "Specify whether the event is continuous contact release, contact-triggered instability or an interior fold"
+    },
+    {
+      "id": "S3",
+      "title": "Finite motion and connected equilibrium branches",
+      "question": "Which stable endpoint can the released structure reach?",
+      "sample": "The same geometry and prescribed control as the source event",
+      "variables": ["full potential energy", "branch coordinate", "physical displacement"],
+      "inputs": ["data/connected_route.csv", "data/endpoint_state.npz"],
+      "processing": "Check route feasibility, the full energy balance and endpoint equilibrium and stability",
+      "observation": "Report the source and endpoint displacement, energy difference and connecting barrier if computed",
+      "figure_ids": ["F3"],
+      "statement": "Separate a demonstrated energetic connection from a uniquely realized dynamic landing"
+    }
+  ],
+  "figures": [
+    {
+      "id": "F1",
+      "path": "figures/reference_geometry.png",
+      "panels": ["specimen geometry", "registered analytical graph"],
+      "source": ["data/reference_geometry.json"],
+      "code": "code/plot_geometry.py",
+      "caption_purpose": "Define the configuration and nodal correspondence"
+    },
+    {
+      "id": "F2",
+      "path": "figures/contact_and_modes.png",
+      "panels": ["contact reactions", "constrained curvature", "physical mode shape"],
+      "source": ["data/equilibrium_states.npz", "data/contact_jacobians.npz"],
+      "code": "code/plot_modes.py",
+      "caption_purpose": "Connect permitted motion with energetic stability"
+    },
+    {
+      "id": "F3",
+      "path": "figures/connected_energy_route.png",
+      "panels": ["complete energy along route", "source and endpoint shapes"],
+      "source": ["data/connected_route.csv", "data/endpoint_state.npz"],
+      "code": "code/plot_route.py",
+      "caption_purpose": "Explain the finite motion and the scope of the endpoint evidence"
+    }
+  ],
+  "preserve": ["List earlier analyses that remain useful and where they are retained"],
+  "unresolved": ["Record specific missing comparisons without inventing results"]
+}

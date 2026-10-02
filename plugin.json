@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "research-mechanics-skills",
-  "version": "0.1.0",
-  "description": "Evidence-bounded significance, gap discovery, scientific writing and configurable Explicit verification.",
+  "version": "0.1.1",
+  "description": "Evidence-bounded significance, gap discovery, scientific writing, research Word documents and configurable Explicit verification.",
   "author": {
     "name": "DJDeborah",
     "url": "https://github.com/DJDeborah"

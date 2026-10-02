@@ -101,7 +101,8 @@ class FEMTests(unittest.TestCase):
 class InstallationTests(unittest.TestCase):
     def test_install_and_no_overwrite(self):
         with tempfile.TemporaryDirectory() as t:
-            dest=Path(t)/'.agents/skills';paths=installer.install(ROOT/'skills',dest,installer.NAMES);self.assertEqual(len(paths),4);self.assertTrue((dest/'fem-explicit-bifurcation/scripts/prepare_explicit.py').is_file())
+            dest=Path(t)/'.agents/skills';paths=installer.install(ROOT/'skills',dest,installer.NAMES);self.assertEqual(len(paths),len(installer.NAMES));self.assertTrue((dest/'fem-explicit-bifurcation/scripts/prepare_explicit.py').is_file())
+            self.assertTrue((dest/'research-word/scripts/inspect_docx.py').is_file())
             with self.assertRaises(FileExistsError):installer.install(ROOT/'skills',dest,installer.NAMES)
     def test_no_partial_install_on_conflict(self):
         with tempfile.TemporaryDirectory() as t:

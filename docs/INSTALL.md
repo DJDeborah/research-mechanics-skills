@@ -8,7 +8,7 @@ Use Python 3.10+; portable scripts need no pip dependencies. Clone or download a
 python tools/install.py --user
 ```
 
-This installs all four complete directories into the current user's `~/.agents/skills`. To install one:
+This installs all five complete directories into the current user's `~/.agents/skills`. To install one:
 
 ```bash
 python tools/install.py --user --skill research-gap
@@ -30,14 +30,15 @@ Paste this in Codex:
 
 ```text
 $skill-installer
-Install these four skills from DJDeborah/research-mechanics-skills:
+Install these five skills from DJDeborah/research-mechanics-skills:
 skills/research-significance
 skills/research-gap
 skills/research-writing
 skills/fem-explicit-bifurcation
+skills/research-word
 ```
 
-That tool controls its own destination and non-overwrite policy. The repository's scripts/resources must accompany each SKILL.md; copying only the Markdown loses the executable part. For a reproducible release, ask the installer to use tag `v0.1.0` or a pinned commit if its interface supports `--ref`.
+That tool controls its own destination and non-overwrite policy. The repository's scripts/resources must accompany each SKILL.md; copying only the Markdown loses the executable part. For reproducibility, use the published tag `v0.1.0` for the original four skills, or a pinned commit for the current five-skill bundle when the installer supports `--ref`.
 
 After installation, start a new Codex task/turn and type `$research-gap` (or another exact name). Verify the skill appears in the selector or that Codex reads its SKILL.md. If the running app has cached discovery, refresh or reopen it. No YAML text needs to be pasted into the chat.
 

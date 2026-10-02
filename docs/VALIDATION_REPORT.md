@@ -4,11 +4,17 @@ Measured on 2026-10-02, Windows, portable Python 3.12.14. Licensed execution use
 
 ## Portable checks
 
-- 38 local unittest checks passed, including informative negative controls for leakage, unbounded novelty, invented ledger IDs, missing passages, missing figures, modified evidence, wrong boundary nodes/DOFs, excessive inertia and incomplete jobs.
-- All four SKILL.md files passed the bundled skill-creator quick validator; UI descriptions/default prompts and local reference links were inspected. UTF-8 mode was needed for that bundled validator on a Windows GBK-default shell.
+- 41 local unittest checks passed (38 existing checks plus three research-word package controls), including informative negative controls for leakage, unbounded novelty, invented ledger IDs, missing passages, missing figures, modified evidence, wrong boundary nodes/DOFs, excessive inertia and incomplete jobs.
+- All five SKILL.md files passed the bundled skill-creator quick validator; UI descriptions/default prompts and local reference links were inspected. UTF-8 mode was needed for that bundled validator on a Windows GBK-default shell.
 - Complete-directory installation was tested in an isolated destination, including non-overwrite behavior. An installed helper was executed successfully. No claim is made that a cached app discovered the skills without a fresh task/turn.
 - The portable end-to-end demo ran all four workflows and generated an annotated writing draft, evidence map, prospective significance contract, synthetic literature ledger, registered Explicit deck and exact normal-form outputs.
 - Fold/pitchfork sampled equilibria had residuals below 1e-12 and the expected tangent signs. These are exact known scalar branches, not an FE continuation test.
+
+## Research Word helper
+
+The new `research-word` skill has a section/figure map, a scientific-argument reference, a practical Word-authoring reference and a standard-library package inspector. Three synthetic tests pass: a valid equation/figure inventory, a missing embedded image rejection, and a non-DOCX rejection. The inspector explicitly leaves rendered-layout verification false. Metadata validation and the existing 38 checks also pass.
+
+No private manuscript or specimen data are published. These package tests do not establish authoring quality, mathematical correctness, visual rendering or a model-level improvement in writing; those require project evidence and actual document review.
 
 ## Real Explicit execution
 

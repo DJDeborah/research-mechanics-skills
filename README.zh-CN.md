@@ -1,4 +1,4 @@
-# 面向力学研究的四套 Codex Skills
+# 面向力学研究的五套 Codex Skills
 
 这套包把研究想法、文献 gap、论文叙事和 FEM 验证串起来，每套都可以单独安装。入口采用官方的 `SKILL.md` + YAML 格式，同时附上可执行脚本、工作模板、领域说明和正反例测试。
 
@@ -17,7 +17,7 @@
 
 这里只公开抽象经验、原创辅助脚本和合成示例，没有上传原始聊天、未发表论文或实际试件资料。
 
-## 四套 Skill 的具体用途
+## 五套 Skill 的具体用途
 
 ### 1. research-significance：为什么值得做
 
@@ -39,6 +39,12 @@
 
 通用部分是注册、选择检查、执行证据、后处理和结论分级。接触、周期约束、复杂材料、真实分支切换、受约束特征模态需要针对项目写 adapter。Explicit 的动态轨迹不能直接叫静态平衡分支，解析 normal form 测试不能冒充 FEM 分岔验证。
 
+### 5. research-word：把推导、后处理和图写成完整 Word
+
+围绕每节的物理问题整理样本、控制变量、输入、推导、后处理、图板和结论，再生成或修改用户指定的 Word。保留完整能量的交叉项，说明任何约束代入或凝聚的依据。使用可用文档工具生成可编辑公式、图注和引用，优先沿用用户的模板。
+
+附带标准库 DOCX 检查器与三个合成测试，可发现缺失的嵌入图和统计公式、标题、图注。版面仍要渲染后检查；渲染接口失效时保留已有 Word，采用已授权的可用后备方式，或明确交付为尚未完成版面检查的工作稿，不反复索取相同许可。详见 [Research Word](docs/RESEARCH_WORD.md)。
+
 ## 安装
 
 在终端执行：
@@ -49,7 +55,7 @@ cd research-mechanics-skills
 python tools/install.py --user
 ```
 
-新开一个 Codex 任务／下一轮对话后，用 `$research-significance`、`$research-gap`、`$research-writing` 或 `$fem-explicit-bifurcation` 调用。也可以在 Codex 中直接使用内置 `$skill-installer` 安装本仓库的四个 `skills/<name>` 路径。详见 [安装指南](docs/INSTALL.md)。
+新开一个 Codex 任务／下一轮对话后，用 `$research-significance`、`$research-gap`、`$research-writing`、`$research-word` 或 `$fem-explicit-bifurcation` 调用。也可以在 Codex 中直接使用内置 `$skill-installer` 安装本仓库的五个 `skills/<name>` 路径。详见 [安装指南](docs/INSTALL.md)。
 
 只让某个项目使用时：
 
@@ -59,7 +65,7 @@ python tools/install.py --project 'D:\my-research-project'
 
 安装器会复制完整目录到项目 `.agents/skills/`，遇到同名目录会停止，不覆盖旧版。
 
-## 四个直接可用的调用示例
+## 五个直接可用的调用示例
 
 ```text
 $research-significance
@@ -87,6 +93,13 @@ $fem-explicit-bifurcation
 先运行包里的 beam smoke 示例，核对 ROOT／TIP 实际节点、DOF 和单位。
 使用 double=both 跑 Abaqus Explicit 并读取 ODB，检查能量与反力。
 然后为我的真实模型列出需要替换的 adapter 项，分别说明动态事件与分岔还缺哪些证据。
+```
+
+```text
+$research-word
+结合我指定的 Word、当前计算与以前的完整结果，按物理问题重写分析。
+每节对应样本、变量、推导、后处理、数据图与结论，保留最强证据。
+输出实际 DOCX，公式尽量可编辑；沿用模板，渲染失败则说明工作稿状态。
 ```
 
 ## 验证是否好用

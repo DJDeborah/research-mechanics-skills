@@ -1,0 +1,4 @@
+interface:
+  display_name: "Research Word"
+  short_description: "Scientific Word with equations and figure evidence"
+  default_prompt: "Use $research-word to turn our scientific analysis into a complete Word document with clear derivations and section-specific figures."
