@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+.venv/
+.agents/
+local-runs/
+*.odb
+*.cae
+*.lck
+*.sim
+*.pac
+*.abq
+*.prt
+*.mdl
+*.stt
+*.res

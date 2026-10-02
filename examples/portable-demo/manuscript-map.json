@@ -1,0 +1,39 @@
+{
+  "claims": [
+    {
+      "id": "C1",
+      "text": "The sampled exact scalar normal forms pass residual and tangent-sign checks.",
+      "status": "supported",
+      "evidence_ids": [
+        "E1"
+      ]
+    },
+    {
+      "id": "C2",
+      "text": "Boundary-driven path selection remains a prospective hypothesis.",
+      "status": "proposed",
+      "evidence_ids": [
+        "E2"
+      ]
+    }
+  ],
+  "figures": [],
+  "evidence": [
+    {
+      "id": "E1",
+      "path": "branches.json",
+      "sha256": "6ff378ce941a247d18b5e7322e96084418906f8812fb597eb0fa86ffe7f08057",
+      "role": "numerical-verification"
+    },
+    {
+      "id": "E2",
+      "path": "significance.json",
+      "sha256": "593ce90b1cc35e34c8f159f09e24ff21822dc22b9f3e9236e8fcb7c2a929097e",
+      "role": "proposal"
+    }
+  ],
+  "required_assets": [
+    "C1",
+    "C2"
+  ]
+}

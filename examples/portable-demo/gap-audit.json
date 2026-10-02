@@ -1,0 +1,11 @@
+{
+  "pass": true,
+  "errors": [],
+  "warnings": [
+    "Synthetic fixture only; not literature-backed novelty."
+  ],
+  "included_studies": 1,
+  "queries": 1,
+  "duplicate_dois": [],
+  "scope": "Provenance and boundedness audit, not novelty verification."
+}

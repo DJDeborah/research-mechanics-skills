@@ -1,0 +1,120 @@
+{
+  "pass": true,
+  "fold": [
+    {
+      "lambda": 0.0,
+      "q": 0.0,
+      "residual": 0.0,
+      "tangent": 0.0,
+      "branch": "fold"
+    },
+    {
+      "lambda": 0.01,
+      "q": -0.1,
+      "residual": 1.734723475976807e-18,
+      "tangent": -0.2,
+      "branch": "fold"
+    },
+    {
+      "lambda": 0.01,
+      "q": 0.1,
+      "residual": 1.734723475976807e-18,
+      "tangent": 0.2,
+      "branch": "fold"
+    },
+    {
+      "lambda": 0.25,
+      "q": -0.5,
+      "residual": 0.0,
+      "tangent": -1.0,
+      "branch": "fold"
+    },
+    {
+      "lambda": 0.25,
+      "q": 0.5,
+      "residual": 0.0,
+      "tangent": 1.0,
+      "branch": "fold"
+    },
+    {
+      "lambda": 1.0,
+      "q": -1.0,
+      "residual": 0.0,
+      "tangent": -2.0,
+      "branch": "fold"
+    },
+    {
+      "lambda": 1.0,
+      "q": 1.0,
+      "residual": 0.0,
+      "tangent": 2.0,
+      "branch": "fold"
+    }
+  ],
+  "pitchfork": [
+    {
+      "lambda": -1.0,
+      "q": 0.0,
+      "residual": 0.0,
+      "tangent": 1.0,
+      "branch": "central"
+    },
+    {
+      "lambda": -0.25,
+      "q": 0.0,
+      "residual": 0.0,
+      "tangent": 0.25,
+      "branch": "central"
+    },
+    {
+      "lambda": 0.0,
+      "q": 0.0,
+      "residual": 0.0,
+      "tangent": 0.0,
+      "branch": "central"
+    },
+    {
+      "lambda": 0.25,
+      "q": 0.0,
+      "residual": 0.0,
+      "tangent": -0.25,
+      "branch": "central"
+    },
+    {
+      "lambda": 0.25,
+      "q": -0.5,
+      "residual": 0.0,
+      "tangent": 0.5,
+      "branch": "side"
+    },
+    {
+      "lambda": 0.25,
+      "q": 0.5,
+      "residual": 0.0,
+      "tangent": 0.5,
+      "branch": "side"
+    },
+    {
+      "lambda": 1.0,
+      "q": 0.0,
+      "residual": 0.0,
+      "tangent": -1.0,
+      "branch": "central"
+    },
+    {
+      "lambda": 1.0,
+      "q": -1.0,
+      "residual": 0.0,
+      "tangent": 2.0,
+      "branch": "side"
+    },
+    {
+      "lambda": 1.0,
+      "q": 1.0,
+      "residual": 0.0,
+      "tangent": 2.0,
+      "branch": "side"
+    }
+  ],
+  "scope": "Known exact normal forms only; no FE branch discovery, contact or dynamic landing verification."
+}
